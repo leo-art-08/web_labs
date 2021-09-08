@@ -1,0 +1,11 @@
+body {
+  font-family: Times New Roman, sans-serif;
+  font-size: 20px;
+  line-height: 50px;
+  color: #999999;
+
+  /*  Пример подключения изображения из папки  img */
+  background-image: url("../img/virtual.JPG");
+  background-repeat: no-repeat;
+  background-position: center top;
+}

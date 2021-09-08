@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Уравнения</title>
+	<head>
+
+	<body>
+	
+		Уравнение вида ax<sup>2</sup> + bx + c = 0 
+		<hr align = "left" color "red" size = 3 width = "230">
+
+		Алгоритм решения в виде функции на языке Pascal;
+		<pre>
+		var
+    		a,b,c,d,x1,x2: real;
+		begin
+		    write('a='); readln(a);
+		    write('b='); readln(b);
+		    write('c='); readln(c);
+		    d := b * b - 4*a*c;
+		    if d > 0 then begin
+		        x1 := (-b + sqrt(d)) / (2*a);
+		        x2 := (-b - sqrt(d)) / (2*a);
+		        writeln('x1=',x1:3:2,'; x2=',x2:3:2);
+		    end
+		    else
+		        if d = 0 then begin
+		            x1 := (-b) / (2*a);
+		            writeln('x=',x1:5:2);
+		        end
+		        else
+		            writeln('Корней нет');
+		end.
+		</pre>
+		<hr align = "left" color "red" size = 3 width = "430">
+		<pre>
+		#include <iostream> // подключаем cin/cout
+		#include <cmath> // подключаем sqrt
+ 
+		using namespace std;
+		 
+		int main()
+		{
+		  setlocale(LC_ALL, "Russian"); 
+		  double a,b,c,d,x1,x2; // Объявляем переменные с плавающей точкой.
+		 
+		  cout << "Введите a\n"; // Вводим исходные данные
+		  cin >> a;
+		  cout << "Введите b\n";
+		  cin >> b;
+		  cout << "Введите c\n";
+		  cin >> c;
+		 
+		  d = b * b - 4 * a * c; // Рассчитываем дискриминант
+		  if (d > 0) // Условие при дискриминанте больше нуля
+		  {
+		    x1 = ((-b) + sqrt(d)) / (2 * a);
+		    x2 = ((-b) - sqrt(d)) / (2 * a);
+		    cout << "x1 = " << x1 << "\n";
+		    cout << "x2 = " << x2 << "\n";
+		  }
+		  if (d == 0) // Условие для дискриминанта равного нулю
+		  {
+		    x1 = -(b / (2 * a));
+		    cout << "x1 = x2 = " << x1 << "\n";
+		  }
+		  if (d < 0) // Условие при дискриминанте меньше нуля
+		    cout << "D < 0, Действительных корней уравнения не существует";
+		}
+		</pre>
+
+		<hr align = "left" color "red" size = 3 width = "430">
+
+		Пример решения квадратного уравнения вида ax<sup>2</sup> + bx + c = 0;
+
+		2x<sup>2</sup> + 5x - 3 = 0;
+		<hr align = "left" color "red" size = 3 width = "200">
+		<pre>
+		Решение:
+		Дано:
+		a = 2;
+		b = 5;
+		c = -3.
+
+		D = b<sup>2</sup> - 4ac
+		D = 5<sup>2</sup> - 4 * 2 * (-3) 
+		D = 25 + 24 
+		D = 49 
+		D = 7<sup>2</sup>
+
+		Следовательно 2 действительных корня
+
+		</b> <i>x<sub>1</sub></i> = (- b + √D )/2a 
+		</b><i>х<sub>2<sub></sub></i> = (- b − √D )/2a 
+
+		Подставляем численные значения: 
+		x1 = ( − 5 + 7 ) / 2 ∗ 2 = 2 
+		x2 = ( − 5 – 7 ) / 2 ∗ 2 = − 12
+
+		Ответ: </b> <i>x<sub>1</sub></i> = 2, <i>х<sub>2<sub></sub></i> = -12 </p>
